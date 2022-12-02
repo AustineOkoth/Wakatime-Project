@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="onlinelogomaker-030822-0822-4397-500.jpg" style="border-radius: 100%;">
+    <title>WorkerTime</title>
+</head>
+<style>
+    html {
+        height: min-content;
+        background-color: white;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    button {
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 10px 5px 5px black;
+    }
+
+    /* button:focus{
+        outline: none;
+        border: 0px;
+    } */
+
+    .title {
+
+        border-radius: 10px;
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: serif;
+
+    }
+</style>
+
+
+<body>
+    <div id="header-image">
+        <img id="image" src="./onlinelogomaker-030822-0822-4397-500.jpg">
+
+    </div>
+
+    <div id="all-category">
+
+
+        <button class="btn" id="worker" style="background-color: rgba(118, 143, 71, 0.637);">
+            <h3 class="title"> Worker</h3>
+
+        </button><br>
+
+        <button class="btn" id="supportstaff" style="background-color: rgba(255, 192, 203, 0.438);">
+            <h3 class="title">Support Staff</h3>
+
+        </button><br>
+
+        <button class="btn" id="guests" style="background-color: rgba(0, 0, 255, 0.315);">
+            <h3 class="title">Guests</h3>
+
+        </button>
+
+    </div>
+
+    <div id="login-logout-btn"></div>
+
+
+    <script>
+        const workerButton = document.getElementById("worker");
+        const supportstaffButton = document.getElementById("supportstaff");
+        const guestsButton = document.getElementById("guests");
+
+
+        supportstaffButton.addEventListener("click", () => {
+            location.href = "/login"
+
+        })
+
+        workerButton.addEventListener("click", () => {
+            document.getElementById("all-category").innerHTML = ``;
+
+            document.getElementById("login-logout-btn").innerHTML = `<button id="login-btn" style="background-color: rgba(0, 0, 255, 0.315);">
+                <h3 class="title">LOGIN</h3>
+
+            </button><br>
+            <button id="logout-btn" style="background-color: rgba(0, 0, 255, 0.315);">
+                <h3 class="title">LOGOUT</h3>
+
+            </button>`
+
+            document.getElementById("login-btn").addEventListener("click", () => {
+                location.href = "/login"
+            })
+
+            document.getElementById("logout-btn").addEventListener("click", () => {
+                location.href = "/logout"
+            })
+        });
+
+
+
+        guestsButton.addEventListener("click", () => {
+            document.getElementById("all-category").innerHTML = ``;
+
+            document.getElementById("login-logout-btn").innerHTML = `<button id="login-btn" style="background-color: rgba(0, 0, 255, 0.315);">
+                <h3 class="title">LOGIN</h3>
+
+            </button><br>
+            <button id="logout-btn" style="background-color: rgba(0, 0, 255, 0.315);">
+                <h3 class="title">LOGOUT</h3>
+
+            </button>`
+
+            document.getElementById("login-btn").addEventListener("click", () => {
+                location.href = "/guests/login"
+            })
+
+            document.getElementById("logout-btn").addEventListener("click", () => {
+                location.href = "/guests/logout"
+            })
+        });
+
+    </script>
+
+</body>
+
+</html>

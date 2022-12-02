@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="onlinelogomaker-030822-0822-4397-500.jpg" style="border-radius: 100%;">
+    <link rel="stylesheet" href="index.css">
+    <title>WorkerTime Registration</title>
+</head>
+
+<body>
+    <div id="reg-container">
+
+        <div id="header-image">
+            <img id="image" src="/onlinelogomaker-030822-0822-4397-500.jpg">
+
+        </div>
+
+        <div id="reg-form-section">
+            <form id="reg-form" action="/registration" method="post">
+
+                <fieldset style="width: fit-content; border: 2px dotted rgba(167, 155, 155, 0.5); border-radius: 10px;">
+                    <legend style="font-family: Arial, Helvetica, sans-serif; font-size: smaller;">Please fill all the
+                        fields in the form</legend>
+
+                    <input type="text" id="fullname" name="regfullname" placeholder="Enter Full Name" required><br>
+                    <input type="email" id="email" name="regemail" placeholder="Email" required><br>
+                    <input type="text" id="depato" name="regdepartment" placeholder="Enter your Department" required><br>
+                    <input type="number" id="workerid" name="regworkerid" placeholder="Enter worker Id" required><br>
+                    <input type="password" id="password" name="regpassword" placeholder="Password" required><br>
+                    <input type="password" id="confirmpassword" name="regconfirmpassword"
+                        placeholder="Confirm Password" required><br>
+
+
+                    <div id="error" style="color: red; font-size: smaller;"> <h5><%= registrationError%></h5> </div>
+                  
+
+                    <input type="submit" id="submit-btn" value="Submit">
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+
+        const form = document.getElementById("reg-form");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmpassword");
+        const errorMessage = document.getElementById("error");
+
+        form.addEventListener("submit", (e) => {
+            if (password.value != confirmPassword.value) {
+                e.preventDefault();
+                errorMessage.innerHTML = `Password and Confirm password should Match`
+
+            }
+        })
+    </script>
+
+    <script src="../users.js"></script>
+
+
+</body>
+
+</html>

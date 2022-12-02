@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="onlinelogomaker-030822-0822-4397-500.jpg" style="border-radius: 100%;">
+    <link rel="stylesheet" href="index.css">
+    <title>WorkerTime SignOut</title>
+</head>
+<body>
+
+    <div id="header-image">
+        <img id="image" src="/onlinelogomaker-030822-0822-4397-500.jpg">
+
+    </div>
+
+
+    <div id="logout-container">
+        <div id="logout-form-section">
+            <form id="logout-form" method="post">
+                <input type="number"  id="workerid" name="logoutworkerId" placeholder="Enter Worker Id .." required><br>
+                <input type="password" id="password" name="logoutpassword" placeholder="Enter Password ..." required><br>
+                <div id="logoutError" style="color: red;"><h5><%= logoutError%></h5></div>
+
+                <input type="submit" value="Sign Out">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

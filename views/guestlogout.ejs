@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="onlinelogomaker-030822-0822-4397-500.jpg" style="border-radius: 100%;">
+    <title>WorkerTime SignIn</title>
+</head>
+
+<style>
+    body {
+        margin-top: 5%;
+        background-color: white;
+    }
+    #reg-container {
+        background-color: white;
+    }
+
+    #header-image,
+    #reg-form,
+    fieldset,
+    #login-container,
+    #logout-container {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    input {
+        margin-top: 12px;
+        margin-right: auto;
+        height: 25px;
+        border: 0px;
+        border-radius: 5px;
+        background-color: whitesmoke;
+    }
+    [type="text"],
+    [type="email"],
+    [type="number"],
+    [type="password"] {
+        padding-left: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 14px;
+    }
+
+    :focus {
+        outline: none;
+    }
+</style>
+
+<body>
+
+    <div id="header-image">
+        <img id="image" src="/onlinelogomaker-030822-0822-4397-500.jpg">
+
+    </div>
+<h5 id="welcome-greating" style="text-align: center; font-family: serif;">WE APPRECIATE YOUR VISIT TO OUR COMPANY...</h5>
+<h5 id="welcome-greating" style="text-align: center; font-family: serif;">IT WOULD BE LOVELY TO SEE YOU AGAIN</h5>
+    <div id="login-container">
+        <div id="login-form-section">
+            <form id="login-form" action="/guests/logout" method="post">
+                <input type="text" id="workerid" name="guestsname" placeholder="Enter Guests Full Name .." required><br>
+                <input type="number" id="password" name="guestsid" placeholder="Enter Guests National ID" required><br>
+
+                <div id="Error" style="color: red;"><h5><%= guestlogoutError%></h5></div>
+
+                <input type="submit" value="Sign Out">
+            </form>
+        </div>
+    </div>
+
+    <script src="../users.js"></script>
+</body>
+
+</html>

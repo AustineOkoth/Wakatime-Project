@@ -1,0 +1,38 @@
+
+body{
+    margin-top: 5%;
+    background-color: white;
+}
+
+
+#reg-container{
+
+    background-color:white;
+
+}
+#header-image, #reg-form, fieldset, #login-container ,#logout-container{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input{
+    margin-top: 12px;
+    margin-right: auto;
+    height: 25px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+
+}
+
+
+[type = "text"],[type = "email"],[type = "number"],[type = "password"]{
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+}
+
+:focus{
+    outline: none;
+}
